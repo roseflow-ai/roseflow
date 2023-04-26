@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
+require "anyway_config"
+
+Anyway::Settings.use_local_files = true
+
 require "roseflow"
+require "webmock/rspec"
+require "vcr"
+
+Dir[File.join(File.dirname(__FILE__), "support", "**", "*.rb")].sort.each { |f| require f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -12,4 +20,9 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = "spec/fixtures/vcr"
+  config.hook_into :webmock
 end

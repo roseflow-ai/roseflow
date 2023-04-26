@@ -34,5 +34,17 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  spec.add_dependency "activesupport", "~> 7.0"
+  spec.add_dependency "anyway_config", "~> 2.0"
+  spec.add_dependency "dry-struct", "~> 1.6"
+  spec.add_dependency "dry-validation", "~> 1.10"
+  spec.add_dependency "hashie", "~> 5.0"
+  spec.add_dependency "light-service", "~> 0.18"
+  spec.add_dependency "phlex", "~> 1.8.1"
+
+  spec.add_development_dependency "pragmatic_segmenter", "~> 0.3"
+  spec.add_development_dependency "roseflow-openai", "~> 0.1.0"
+  spec.add_development_dependency "roseflow-pinecone", "~> 0.1.0"
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "vcr"
 end

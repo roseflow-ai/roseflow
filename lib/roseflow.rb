@@ -2,6 +2,12 @@
 
 require_relative "roseflow/version"
 
+require "roseflow/action"
+require "roseflow/interaction"
+require "roseflow/interaction_context"
+
+require "roseflow/ai/model"
+
 module Roseflow
   class Error < StandardError; end
   
