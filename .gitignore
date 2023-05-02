@@ -10,4 +10,5 @@
 # rspec failure tracking
 .rspec_status
 Gemfile.lock
-/config/*.local.yml
+Gemfile.local
+*.local.yml

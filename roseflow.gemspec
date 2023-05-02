@@ -4,7 +4,7 @@ require_relative "lib/roseflow/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "roseflow"
-  spec.version       = Roseflow::VERSION
+  spec.version       = Roseflow.gem_version
   spec.authors       = ["Lauri Jutila"]
   spec.email         = ["github@laurijutila.com"]
 
@@ -38,9 +38,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency "anyway_config", "~> 2.0"
   spec.add_dependency "dry-struct", "~> 1.6"
   spec.add_dependency "dry-validation", "~> 1.10"
+  spec.add_dependency "finite_machine", "~> 0.14"
   spec.add_dependency "hashie", "~> 5.0"
   spec.add_dependency "light-service", "~> 0.18"
   spec.add_dependency "phlex", "~> 1.8.1"
+  spec.add_dependency "ulid-ruby", "~> 1.0"
 
   spec.add_development_dependency "pragmatic_segmenter", "~> 0.3"
   spec.add_development_dependency "roseflow-openai", "~> 0.1.0"
