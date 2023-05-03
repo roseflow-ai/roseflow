@@ -7,7 +7,7 @@ module Roseflow
   module Text
     RSpec.describe SentenceSplitter do
       let(:text) { File.read("spec/fixtures/text/markdown.md") }
-      
+
       context "chunk overlap is 1" do
         let(:splitter) { SentenceSplitter.new(chunk_size: 1000, chunk_overlap: 1) }
 

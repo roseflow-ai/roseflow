@@ -9,7 +9,7 @@ module Roseflow
         expect(Roseflow::Interaction).to respond_to(:with)
       end
     end
-    
+
     let(:ctx) { InteractionContext.make(model: "gpt-3.5-turbo") }
 
     context "when #with is called with a hash" do
@@ -55,12 +55,12 @@ module Roseflow
       let(:interaction) { TestDoubles::NotExplicitlyReturningContextInteraction.call(ctx) }
 
       it "reduces an interaction which returns something" do
-        expect(interaction).to eq [1,2,3]
+        expect(interaction).to eq [1, 2, 3]
       end
 
       it "adds :foo and :bar to the context" do
         reduced
-        expect(ctx.foo).to eq [1,2,3]
+        expect(ctx.foo).to eq [1, 2, 3]
         expect(ctx.bar).to eq ctx.foo
       end
 

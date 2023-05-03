@@ -6,13 +6,12 @@ class Interactions::LoadFilesToDocumentDatabase
   extend Roseflow::Interaction
 
   def self.call(ctx)
-    with(ctx).reduce(self.actions)
+    with(ctx).reduce(actions)
   end
 
   def self.actions
     [
       SplitFilesToDocuments,
-      TokenizeDocuments,
       LoadDocumentsToDatabase
     ]
   end

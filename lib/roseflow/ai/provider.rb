@@ -23,7 +23,7 @@ module Roseflow
         case name
         when :openai
           @provider = Roseflow::OpenAI::Provider.new(credentials: credentials)
-        end      
+        end
       end
     end # Provider
   end # AI

@@ -1,5 +1,16 @@
 # frozen_string_literal: true
 
+# This class represents an interaction that allows users to chat about
+# a Github repository. It orchestrates the required actions to load
+# the repository, prepare the vector store, and ask the LLM about the repository.
+#
+# Example usage:
+#   question = "What is the repository about?"
+#   response = Interactions::GithubRepositoryChat.call(
+#     question: question,
+#     repository_url: "https://github.com/ljuti/roseflow"
+#   )
+
 require "roseflow/interaction"
 
 require_relative "./ask_llm"
@@ -10,14 +21,16 @@ class Interactions::GithubRepositoryChat
   extend Roseflow::Interaction
 
   def self.call(context = {})
-    with(context).reduce(self.actions)
+    with(context).reduce(actions)
   end
 
+  # Define the sequence of actions (or interactions) to be performed
+  # by the interaction.
   def self.actions
     [
-      LoadRepository,
-      PrepareVectorStore,
-      AskLLM
+      LoadRepository, # Load repository from Github and prepare it
+      PrepareVectorStore, # Prepare vector store for querying
+      AskLLM # Ask the LLM about the repository
     ]
   end
 end

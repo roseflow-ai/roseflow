@@ -17,7 +17,7 @@ module Roseflow
           context[:provider] = resolve_provider(context[:provider])
         end
 
-        private
+        private_class_method
 
         def self.resolve_provider(provider)
           case provider

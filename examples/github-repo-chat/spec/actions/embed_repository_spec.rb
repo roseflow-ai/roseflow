@@ -5,7 +5,7 @@ require "roseflow/pinecone"
 require "roseflow/pinecone/vector_store"
 
 RSpec.describe Actions::EmbedRepository do
-  let(:repository) { Repository.new("ulid-ruby", "https://github.com/abachman/ulid-ruby.git", { "ulid-ruby.gemspec": "This is a gemspec for the gem" }) }
+  let(:repository) { Repository.new("ulid-ruby", "https://github.com/abachman/ulid-ruby.git", {"ulid-ruby.gemspec": "This is a gemspec for the gem"}) }
   let(:ctx) do
     Roseflow::InteractionContext.make(
       repository: repository,

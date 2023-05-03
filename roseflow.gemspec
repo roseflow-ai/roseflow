@@ -3,16 +3,16 @@
 require_relative "lib/roseflow/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "roseflow"
-  spec.version       = Roseflow.gem_version
-  spec.authors       = ["Lauri Jutila"]
-  spec.email         = ["github@laurijutila.com"]
+  spec.name = "roseflow"
+  spec.version = Roseflow.gem_version
+  spec.authors = ["Lauri Jutila"]
+  spec.email = ["github@laurijutila.com"]
 
-  spec.description   = "Roseflow is a library for effortlessly building interactions with AI"
-  spec.homepage      = "https://github.com/ljuti/roseflow"
+  spec.description = "Roseflow is a library for effortlessly building interactions with AI"
+  spec.homepage = "https://github.com/ljuti/roseflow"
 
-  spec.summary       = "Effortless interactions with AI"
-  spec.license       = "MIT"
+  spec.summary = "Effortless interactions with AI"
+  spec.license = "MIT"
 
   spec.required_ruby_version = ">= 3.2.0"
 

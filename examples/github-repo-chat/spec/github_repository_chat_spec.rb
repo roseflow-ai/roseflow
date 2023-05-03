@@ -12,6 +12,5 @@ RSpec.describe Interactions::GithubRepositoryChat do
   end
 
   describe "" do
-    
   end
 end

@@ -9,17 +9,13 @@ class Interactions::PrepareVectorStore
   extend Roseflow::Interaction
 
   def self.call(context = {})
-    with(context).reduce(self.actions)
+    with(context).reduce(actions)
   end
 
   def self.actions
     [
       InitializeVectorStore,
-      new_vector_store?(ctx)
-    ].compact
-  end
-
-  def new_vector_store?(ctx)
-    ctx.has_embeddings? ? nil : EmbedRepository
+      reduce_if(->(ctx) { ctx.vector_store.has_embeddings? }, EmbedRepository)
+    ]
   end
 end

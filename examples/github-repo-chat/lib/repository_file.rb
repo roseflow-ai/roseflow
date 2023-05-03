@@ -3,11 +3,12 @@
 require "ulid"
 
 class RepositoryFile < Roseflow::Embeddings::Base
-  def initialize(name, content, metadata = {})
+  def initialize(name:, content:, **kwargs)
     @name = name
     @content = content
     @id = ULID.generate
-    @metadata = metadata
+    @token_count = kwargs[:token_count]
+    @tokens = kwargs[:tokens]
   end
 
   def embedding
@@ -17,17 +18,14 @@ class RepositoryFile < Roseflow::Embeddings::Base
   private
 
   def create_embedding
-    # response = openai_client.create_embedding(model: openai_client.provider.models.embeddable.first, input: @content)
-    # puts response
-    # response
-    openai.embedding(model: openai.models.embeddable.first, input: @content)
+    provider.embedding(model: embedding_model, input: @content)
   end
 
-  def openai_client
-    # @openai_client ||= Roseflow::OpenAI::Client.new
+  def provider
+    @provider ||= Roseflow::OpenAI::Provider.new
   end
 
-  def openai
-    @openai ||= Roseflow::OpenAI::Provider.new
+  def embedding_model
+    provider.models.embeddable.find { |model| model.name == "text-embedding-ada-002" } || openai.models.embeddable.first
   end
 end

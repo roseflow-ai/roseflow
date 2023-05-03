@@ -18,7 +18,7 @@ module Roseflow
         segments = text.split(find_separator(text))
         current_size = 0
         results = [[]]
-      
+
         segments.each do |segment|
           if current_size + segment.size > chunk_size
             overlap = [results.last.last(chunk_overlap), segment].flatten
@@ -29,7 +29,7 @@ module Roseflow
             results.last << segment
           end
         end
-      
+
         results.map { |r| r.join(" ") }
       end
 

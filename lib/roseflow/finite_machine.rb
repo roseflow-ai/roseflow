@@ -37,7 +37,7 @@ module FiniteMachine
     def initialize(machine)
       @id = ULID.generate
       @machine = machine
-      @hooks   = Hooks.new
+      @hooks = Hooks.new
 
       @machine.subscribe(self)
       ObjectSpace.define_finalizer(@id, method(:cleanup_callback_queue))
@@ -182,12 +182,12 @@ module FiniteMachine
     def handle_callback(hook, event, *data)
       to = machine.events_map.move_to(event.event_name, event.from, *data)
       trans_event = TransitionEvent.new(event.event_name, event.from, to)
-      callable    = create_callable(hook)
+      callable = create_callable(hook)
 
       if hook.is_a?(Async)
         defer(callable, trans_event, *data)
       else
-        callable.(trans_event, *data)
+        callable.call(trans_event, *data)
       end
     end
 
@@ -257,23 +257,23 @@ module FiniteMachine
     def initialize(*args, &block)
       options = args.last.is_a?(::Hash) ? args.pop : {}
       @initial_state = DEFAULT_STATE
-      @auto_methods  = options.fetch(:auto_methods, true)
-      @subscribers   = Subscribers.new
-      @observer      = Observer.new(self)
-      @events_map    = EventsMap.new
-      @env           = Env.new(self, [])
-      @dsl           = DSL.new(self, options)
-      @name          = options.fetch(:name) { ULID.generate }
+      @auto_methods = options.fetch(:auto_methods, true)
+      @subscribers = Subscribers.new
+      @observer = Observer.new(self)
+      @events_map = EventsMap.new
+      @env = Env.new(self, [])
+      @dsl = DSL.new(self, options)
+      @name = options.fetch(:name) { ULID.generate }
 
       env.target = args.pop unless args.empty?
       env.aliases << options[:alias_target] if options[:alias_target]
-      dsl.call(&block) if block_given?
+      dsl.call(&block) if block
       trigger_init
     end
 
     def transition!(event_name, *data, &block)
       from_state = current
-      to_state   = events_map.move_to(event_name, from_state, *data)
+      to_state = events_map.move_to(event_name, from_state, *data)
 
       block.call(from_state, to_state) if block
 
@@ -289,7 +289,7 @@ module FiniteMachine
     def report_transition(machine_name, event_name, from, to, *args)
       message = ["Transition: @machine=#{machine_name} @event=#{event_name} "]
       unless args.empty?
-        message << "@with=[#{args.join(',')}] "
+        message << "@with=[#{args.join(",")}] "
       end
       message << "#{from} -> #{to}"
       info(message.join)

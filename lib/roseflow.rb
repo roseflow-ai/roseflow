@@ -14,6 +14,6 @@ require "roseflow/vector_stores/base"
 
 module Roseflow
   class Error < StandardError; end
-  
+
   # Releasing the Kraken soon...
 end

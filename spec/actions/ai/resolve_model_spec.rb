@@ -18,7 +18,7 @@ module Roseflow
             it "calls the action" do
               expect(action).to receive(:execute)
               action.execute(ctx)
-            end  
+            end
           end
 
           context "when the model is found" do

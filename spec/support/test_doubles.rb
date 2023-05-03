@@ -13,7 +13,7 @@ module TestDoubles
   class DataLoadingAction
     extend Roseflow::Action
   end
-  
+
   class SimpleInteraction
     extend Roseflow::Interaction
 
@@ -34,7 +34,7 @@ module TestDoubles
     extend Roseflow::Interaction
 
     def self.call(context)
-      context[:foo] = [1,2,3]
+      context[:foo] = [1, 2, 3]
     end
   end
 
