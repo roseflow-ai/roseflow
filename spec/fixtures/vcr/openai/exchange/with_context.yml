@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"Hello!"},{"role":"user","content":"Hello,
+        model!"},{"role":"assistant","content":"Hello, user!"},{"role":"user","content":"Who
+        won the World Cup in 1990?"},{"role":"assistant","content":"The 1990 FIFA
+        World Cup was won by West Germany (now Germany), who defeated Argentina 1-0
+        in the final."},{"role":"user","content":"Who was the goalkeeper for the winning
+        team?"}]}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.4
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 06 May 2023 07:40:08 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0301
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '3455'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '89926'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 49ms
+      X-Request-Id:
+      - 3f4d89f920af1ff74b269e3ed4a7e98d
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7c2f92b4eb2afe20-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"chatcmpl-7D6oPru10ByYbqnDpO5FzpruvCoWq","object":"chat.completion","created":1683358805,"model":"gpt-3.5-turbo-0301","usage":{"prompt_tokens":89,"completion_tokens":38,"total_tokens":127},"choices":[{"message":{"role":"assistant","content":"The
+        goalkeeper for West Germany in the 1990 World Cup final was Bodo Illgner.
+        He was an important player in the team and was instrumental in securing their
+        victory over Argentina."},"finish_reason":"stop","index":0}]}
+
+        '
+  recorded_at: Sat, 06 May 2023 07:40:08 GMT
+recorded_with: VCR 6.1.0
