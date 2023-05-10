@@ -119,12 +119,9 @@ module Roseflow
           serialized = hnsw.serialize
           deserialized = described_class.deserialize(serialized)
 
-          puts hnsw.nodes.size
-
           vector = generate_random_vector(dimensions)
           neighbors = hnsw.nearest_neighbors(vector, 5)
           deserialized_neighbors = deserialized.nearest_neighbors(vector, 5)
-          puts deserialized_neighbors.map(&:id)
 
           expect(neighbors.map(&:id)).to eq(deserialized_neighbors.map(&:id))
         end
