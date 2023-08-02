@@ -16,6 +16,14 @@ module Roseflow
         def chat(options, &block)
           @model.chat(options.delete(:messages), options, &block)
         end
+
+        def embed(options)
+          @model.embed(options)
+        end
+
+        def operations
+          @model.operations
+        end
       end
     end
   end

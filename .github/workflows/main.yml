@@ -16,6 +16,12 @@ jobs:
         ruby:
           - '3.2.0'
 
+    env:
+      openai_organization_id: ${{ secrets.OPENAI_ORGANIZATION_ID }}
+      openai_api_key: ${{ secrets.OPENAI_API_KEY }}
+      openrouter_api_key: ${{ secrets.OPENROUTER_API_KEY }}
+      openrouter_referer: https://roseflow.ai
+  
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -23,7 +29,15 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
+
     - name: Run the default task
       run: bundle exec rake
+    - name: Coveralls parallel
+      uses: coverallsapp/github-action@v2
+      with:
+        github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        flag-name: run-${{ matrix.test_number }}
+        parallel: true
+
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v2

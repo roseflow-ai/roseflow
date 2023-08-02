@@ -13,7 +13,7 @@ module Roseflow
             klass = Object.const_get("#{config.fetch(:namespace)}::Provider")
             adapter.new(klass.new)
           rescue => exception
-            raise NotImplementedError, "Adapter for provider #{config.fetch(:name)} not implemented"
+            raise NotImplementedError, "Adapter for provider #{config.fetch(:name, :unknown)} not implemented"
           end
         end
       end

@@ -11,8 +11,8 @@ module Roseflow
     class SkeletonOfThought
       extend Roseflow::Interaction
 
-      def self.call(**options)
-        with(options).reduce(self.actions)
+      def self.call(context)
+        with(context).reduce(self.actions)
       end
 
       def self.actions

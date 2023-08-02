@@ -26,6 +26,7 @@ end
 module Roseflow
   class ProviderRepository
     class ProviderNotFoundError < StandardError; end
+    class ProviderNotSupportedError < StandardError; end
 
     def initialize
       @providers = load_providers

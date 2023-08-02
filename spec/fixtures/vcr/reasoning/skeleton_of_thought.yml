@@ -1,0 +1,2839 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.openai.com/v1/models
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Openai-Version:
+      - '2020-10-01'
+      X-Request-Id:
+      - 582b63e423cea0f67b357f09654f4762
+      Openai-Processing-Ms:
+      - '104'
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f28d3c11d95f-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "object": "list",
+          "data": [
+            {
+              "id": "gpt-4-0613",
+              "object": "model",
+              "created": 1686588896,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-5xwZl3df52xxBXzb4cTMtGYV",
+                  "object": "model_permission",
+                  "created": 1690865538,
+                  "allow_create_engine": false,
+                  "allow_sampling": false,
+                  "allow_logprobs": false,
+                  "allow_search_indices": false,
+                  "allow_view": false,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-4-0613",
+              "parent": null
+            },
+            {
+              "id": "gpt-4-0314",
+              "object": "model",
+              "created": 1687882410,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-XkBjMfiNMKV6ij5SliARC0Ve",
+                  "object": "model_permission",
+                  "created": 1690913268,
+                  "allow_create_engine": false,
+                  "allow_sampling": false,
+                  "allow_logprobs": false,
+                  "allow_search_indices": false,
+                  "allow_view": false,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-4-0314",
+              "parent": null
+            },
+            {
+              "id": "text-davinci-001",
+              "object": "model",
+              "created": 1649364042,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-CDlahk1RbkghXDjtxqzXoPNo",
+                  "object": "model_permission",
+                  "created": 1690913868,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-davinci-001",
+              "parent": null
+            },
+            {
+              "id": "text-search-curie-query-001",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-fNgpMH6ZEQulSq1CjzlfQuIe",
+                  "object": "model_permission",
+                  "created": 1690864192,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-curie-query-001",
+              "parent": null
+            },
+            {
+              "id": "davinci",
+              "object": "model",
+              "created": 1649359874,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-8s5tCuiXSr3zT00nLwZGyMpS",
+                  "object": "model_permission",
+                  "created": 1690930152,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "davinci",
+              "parent": null
+            },
+            {
+              "id": "gpt-3.5-turbo-16k-0613",
+              "object": "model",
+              "created": 1685474247,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-0WUfVWoQgban6U6wF2YQVlq7",
+                  "object": "model_permission",
+                  "created": 1690865619,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-3.5-turbo-16k-0613",
+              "parent": null
+            },
+            {
+              "id": "text-babbage-001",
+              "object": "model",
+              "created": 1649364043,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-YABzYWjC1kS6M2BnI6Fr9vuS",
+                  "object": "model_permission",
+                  "created": 1690913878,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-babbage-001",
+              "parent": null
+            },
+            {
+              "id": "curie-instruct-beta",
+              "object": "model",
+              "created": 1649364042,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-4GYfzAdSMcJmQvF7bsw01UWw",
+                  "object": "model_permission",
+                  "created": 1690863785,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "curie-instruct-beta",
+              "parent": null
+            },
+            {
+              "id": "text-davinci-003",
+              "object": "model",
+              "created": 1669599635,
+              "owned_by": "openai-internal",
+              "permission": [
+                {
+                  "id": "modelperm-a6niqBmW2JaGmo0fDO7FEt1n",
+                  "object": "model_permission",
+                  "created": 1690930172,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-davinci-003",
+              "parent": null
+            },
+            {
+              "id": "davinci-similarity",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-XHJ9P2cvfDAl6Q6NABs6wD7G",
+                  "object": "model_permission",
+                  "created": 1690864520,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "davinci-similarity",
+              "parent": null
+            },
+            {
+              "id": "code-davinci-edit-001",
+              "object": "model",
+              "created": 1649880484,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-T8Ie7SvlPyvtsDvPlfC8DftZ",
+                  "object": "model_permission",
+                  "created": 1690915089,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "code-davinci-edit-001",
+              "parent": null
+            },
+            {
+              "id": "text-similarity-curie-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-ZQZGhVQCQSN4WC1wRJsFZfRL",
+                  "object": "model_permission",
+                  "created": 1690864230,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-similarity-curie-001",
+              "parent": null
+            },
+            {
+              "id": "text-embedding-ada-002",
+              "object": "model",
+              "created": 1671217299,
+              "owned_by": "openai-internal",
+              "permission": [
+                {
+                  "id": "modelperm-F3BGCNGb0ChzFesHIYjbNYUX",
+                  "object": "model_permission",
+                  "created": 1690865307,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-embedding-ada-002",
+              "parent": null
+            },
+            {
+              "id": "ada-code-search-text",
+              "object": "model",
+              "created": 1651172510,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-jWFKGhnNYXhMIJuYYBe8zKoH",
+                  "object": "model_permission",
+                  "created": 1690864242,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada-code-search-text",
+              "parent": null
+            },
+            {
+              "id": "text-search-ada-query-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-YO36k119sJYqPB8yHh737z8l",
+                  "object": "model_permission",
+                  "created": 1690864529,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-ada-query-001",
+              "parent": null
+            },
+            {
+              "id": "babbage-search-query",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-o5hcKERXLlTSB0nfq8fPkAzK",
+                  "object": "model_permission",
+                  "created": 1690864257,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage-search-query",
+              "parent": null
+            },
+            {
+              "id": "ada-similarity",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-Tz8CgePTpeDdl0q0mDxAseS4",
+                  "object": "model_permission",
+                  "created": 1690864543,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada-similarity",
+              "parent": null
+            },
+            {
+              "id": "gpt-3.5-turbo",
+              "object": "model",
+              "created": 1677610602,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-zy5TOjnE2zVaicIcKO9bQDgX",
+                  "object": "model_permission",
+                  "created": 1690864883,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-3.5-turbo",
+              "parent": null
+            },
+            {
+              "id": "text-search-ada-doc-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-WQoo7GOoaleCrrerQ8ROIejy",
+                  "object": "model_permission",
+                  "created": 1690864068,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-ada-doc-001",
+              "parent": null
+            },
+            {
+              "id": "text-search-babbage-query-001",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-PHk5XyJIMEk88v14M2eEcJfE",
+                  "object": "model_permission",
+                  "created": 1690864079,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-babbage-query-001",
+              "parent": null
+            },
+            {
+              "id": "code-search-ada-code-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-lPJ8tQWzTuRpZpOjtRN4CjlP",
+                  "object": "model_permission",
+                  "created": 1690864269,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "code-search-ada-code-001",
+              "parent": null
+            },
+            {
+              "id": "curie-search-document",
+              "object": "model",
+              "created": 1651172508,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-o3nt5yDhE7FpA8PtMlzGuW3k",
+                  "object": "model_permission",
+                  "created": 1690864552,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "curie-search-document",
+              "parent": null
+            },
+            {
+              "id": "text-search-davinci-query-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-X2U9yi1RKudh1hGQ9CnPth2A",
+                  "object": "model_permission",
+                  "created": 1690864090,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-davinci-query-001",
+              "parent": null
+            },
+            {
+              "id": "text-search-curie-doc-001",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-7mOkCIwOIehlltLDPM1oSKN7",
+                  "object": "model_permission",
+                  "created": 1690864279,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-curie-doc-001",
+              "parent": null
+            },
+            {
+              "id": "gpt-3.5-turbo-0301",
+              "object": "model",
+              "created": 1677649963,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-7WmfQzsq5FJ92UAnn24LduAN",
+                  "object": "model_permission",
+                  "created": 1690842565,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-3.5-turbo-0301",
+              "parent": null
+            },
+            {
+              "id": "babbage-search-document",
+              "object": "model",
+              "created": 1651172510,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-FQiAIZXWHZ4yJl6b4X0JWpfw",
+                  "object": "model_permission",
+                  "created": 1690864561,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage-search-document",
+              "parent": null
+            },
+            {
+              "id": "gpt-4",
+              "object": "model",
+              "created": 1687882411,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-mGwwgw31mlzzoudHjurTceFL",
+                  "object": "model_permission",
+                  "created": 1690865465,
+                  "allow_create_engine": false,
+                  "allow_sampling": false,
+                  "allow_logprobs": false,
+                  "allow_search_indices": false,
+                  "allow_view": false,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-4",
+              "parent": null
+            },
+            {
+              "id": "babbage-code-search-text",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-9AyTgRlbDLetEnvXKDgJvSvR",
+                  "object": "model_permission",
+                  "created": 1690864101,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage-code-search-text",
+              "parent": null
+            },
+            {
+              "id": "whisper-1",
+              "object": "model",
+              "created": 1677532384,
+              "owned_by": "openai-internal",
+              "permission": [
+                {
+                  "id": "modelperm-3SeXqCXRSTQ4dMIQ10epodAC",
+                  "object": "model_permission",
+                  "created": 1690916948,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "whisper-1",
+              "parent": null
+            },
+            {
+              "id": "gpt-3.5-turbo-16k",
+              "object": "model",
+              "created": 1683758102,
+              "owned_by": "openai-internal",
+              "permission": [
+                {
+                  "id": "modelperm-r2x739b21PqZv0StkJePepPC",
+                  "object": "model_permission",
+                  "created": 1690866609,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-3.5-turbo-16k",
+              "parent": null
+            },
+            {
+              "id": "davinci-instruct-beta",
+              "object": "model",
+              "created": 1649364042,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-ZNpXjNy0lDniBWzpvi6w6wSU",
+                  "object": "model_permission",
+                  "created": 1690842588,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "davinci-instruct-beta",
+              "parent": null
+            },
+            {
+              "id": "davinci-search-query",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-w5yjX7u1Hgz0jJFhPRB93n6I",
+                  "object": "model_permission",
+                  "created": 1690864112,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "davinci-search-query",
+              "parent": null
+            },
+            {
+              "id": "text-similarity-babbage-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-8p0vOyyD6xVDYv6XOC4EYIin",
+                  "object": "model_permission",
+                  "created": 1690864583,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-similarity-babbage-001",
+              "parent": null
+            },
+            {
+              "id": "text-davinci-002",
+              "object": "model",
+              "created": 1649880484,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-Ao62Dd2uu76ec6Koq1ksR2rj",
+                  "object": "model_permission",
+                  "created": 1690864376,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-davinci-002",
+              "parent": null
+            },
+            {
+              "id": "code-search-babbage-text-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-uH251hsudZq0DqxtTcSYFTcD",
+                  "object": "model_permission",
+                  "created": 1690864593,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "code-search-babbage-text-001",
+              "parent": null
+            },
+            {
+              "id": "babbage",
+              "object": "model",
+              "created": 1649358449,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-vZIqTaVk4K37PezAFVHAEW3H",
+                  "object": "model_permission",
+                  "created": 1690943947,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage",
+              "parent": null
+            },
+            {
+              "id": "text-search-davinci-doc-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-sqcSr7AYu6WYtzWgysHg1zO4",
+                  "object": "model_permission",
+                  "created": 1690864126,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-davinci-doc-001",
+              "parent": null
+            },
+            {
+              "id": "code-search-ada-text-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-1JbI0GFKw9luPgTJQut1uJNe",
+                  "object": "model_permission",
+                  "created": 1690864601,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "code-search-ada-text-001",
+              "parent": null
+            },
+            {
+              "id": "ada-search-query",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-cBtmsjrTZIJUKgjS8G6uALKM",
+                  "object": "model_permission",
+                  "created": 1690864138,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada-search-query",
+              "parent": null
+            },
+            {
+              "id": "text-similarity-ada-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-fSDlSniO72T5MvD6ieDRue0a",
+                  "object": "model_permission",
+                  "created": 1690864457,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-similarity-ada-001",
+              "parent": null
+            },
+            {
+              "id": "ada-code-search-code",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-469coJJMBDffmGlbftht9QR7",
+                  "object": "model_permission",
+                  "created": 1690864147,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada-code-search-code",
+              "parent": null
+            },
+            {
+              "id": "ada",
+              "object": "model",
+              "created": 1649357491,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-mEzQ65zcTNX233nYMXVZjvmy",
+                  "object": "model_permission",
+                  "created": 1690950776,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada",
+              "parent": null
+            },
+            {
+              "id": "text-davinci-edit-001",
+              "object": "model",
+              "created": 1649809179,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-bwEWUtGiBcdX0p1D1ayafH8w",
+                  "object": "model_permission",
+                  "created": 1690915020,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-davinci-edit-001",
+              "parent": null
+            },
+            {
+              "id": "davinci-search-document",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-1jEFSTL1yLUnTyI8TekKPGQF",
+                  "object": "model_permission",
+                  "created": 1690864158,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "davinci-search-document",
+              "parent": null
+            },
+            {
+              "id": "curie-search-query",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-fvYLh7mrZBoEXRa9teCq7ZsK",
+                  "object": "model_permission",
+                  "created": 1690864488,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "curie-search-query",
+              "parent": null
+            },
+            {
+              "id": "babbage-similarity",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-XBmFjRKu34Qvm9Y8Vjg6si3V",
+                  "object": "model_permission",
+                  "created": 1690864610,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage-similarity",
+              "parent": null
+            },
+            {
+              "id": "ada-search-document",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-jEtYYVTVutQ4BLh2DnGd9tJt",
+                  "object": "model_permission",
+                  "created": 1690864171,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "ada-search-document",
+              "parent": null
+            },
+            {
+              "id": "text-ada-001",
+              "object": "model",
+              "created": 1649364042,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-jRuB7xBCdj159SqaDmpPgeWO",
+                  "object": "model_permission",
+                  "created": 1690915029,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-ada-001",
+              "parent": null
+            },
+            {
+              "id": "text-similarity-davinci-001",
+              "object": "model",
+              "created": 1651172505,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-CoAjJ7mSHeO28X7KowOnwvj9",
+                  "object": "model_permission",
+                  "created": 1690864500,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-similarity-davinci-001",
+              "parent": null
+            },
+            {
+              "id": "curie",
+              "object": "model",
+              "created": 1649359874,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-0g6LBMO3cgUpTYzehqtF9G1i",
+                  "object": "model_permission",
+                  "created": 1690950807,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "curie",
+              "parent": null
+            },
+            {
+              "id": "curie-similarity",
+              "object": "model",
+              "created": 1651172510,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-gSmuEPu9Q8KjQhJ5myLNKIIV",
+                  "object": "model_permission",
+                  "created": 1690864620,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "curie-similarity",
+              "parent": null
+            },
+            {
+              "id": "gpt-3.5-turbo-0613",
+              "object": "model",
+              "created": 1686587434,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-XIXH7QF7QM60DDcON9eaGFfk",
+                  "object": "model_permission",
+                  "created": 1690842445,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "gpt-3.5-turbo-0613",
+              "parent": null
+            },
+            {
+              "id": "babbage-code-search-code",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-UdNutuGVhzb5EBzlkaztBdMH",
+                  "object": "model_permission",
+                  "created": 1690864182,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "babbage-code-search-code",
+              "parent": null
+            },
+            {
+              "id": "code-search-babbage-code-001",
+              "object": "model",
+              "created": 1651172507,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-0mO5qmzzKUVVVZ9MIHTnwjwK",
+                  "object": "model_permission",
+                  "created": 1690864510,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "code-search-babbage-code-001",
+              "parent": null
+            },
+            {
+              "id": "text-search-babbage-doc-001",
+              "object": "model",
+              "created": 1651172509,
+              "owned_by": "openai-dev",
+              "permission": [
+                {
+                  "id": "modelperm-dvJNsLdOcnLbIYlRZRnfQAfX",
+                  "object": "model_permission",
+                  "created": 1690864628,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": true,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-search-babbage-doc-001",
+              "parent": null
+            },
+            {
+              "id": "text-curie-001",
+              "object": "model",
+              "created": 1649364043,
+              "owned_by": "openai",
+              "permission": [
+                {
+                  "id": "modelperm-vcuXVPe8oCucYrY0hxBNBXRd",
+                  "object": "model_permission",
+                  "created": 1690915039,
+                  "allow_create_engine": false,
+                  "allow_sampling": true,
+                  "allow_logprobs": true,
+                  "allow_search_indices": false,
+                  "allow_view": true,
+                  "allow_fine_tuning": false,
+                  "organization": "*",
+                  "group": null,
+                  "is_blocking": false
+                }
+              ],
+              "root": "text-curie-001",
+              "parent": null
+            }
+          ]
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:13 GMT
+- request:
+    method: get
+    uri: https://openrouter.ai/api/v1/models
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Http-Referer:
+      - https://roseflow.ai
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENROUTER_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Api-Key, X-CSRF-Token, X-Requested-With, Accept, Accept-Version,
+        Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, HTTP-Referer,
+        X-Windowai-Title, X-Openrouter-Title, X-Title
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS,PATCH,DELETE,POST,PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 02 Aug 2023 11:23:14 GMT
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/v1/models"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - arn1::59grg-1690975393401-f869f670130a
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"openai/gpt-3.5-turbo","pricing":{"prompt":"0.0000015","completion":"0.000002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-3.5-turbo-0301","pricing":{"prompt":"0.0000015","completion":"0.000002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-3.5-turbo-16k","pricing":{"prompt":"0.000003","completion":"0.000004"},"context_length":16383,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4","pricing":{"prompt":"0.00003","completion":"0.00006"},"context_length":8191,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4-0314","pricing":{"prompt":"0.00003","completion":"0.00006"},"context_length":8191,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4-32k","pricing":{"prompt":"0.00006","completion":"0.00012"},"context_length":32767,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/text-davinci-002","pricing":{"prompt":"0.00002","completion":"0.00002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-2","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-v1","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-v1","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-1.2","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-v1-100k","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-v1-100k","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-1.0","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"google/palm-2-chat-bison","pricing":{"prompt":"0","completion":"0"},"context_length":8000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"google/palm-2-codechat-bison","pricing":{"prompt":"0","completion":"0"},"context_length":8000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"meta-llama/llama-2-13b-chat","pricing":{"prompt":"0.000004","completion":"0.000004"},"context_length":4096,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"meta-llama/llama-2-70b-chat","pricing":{"prompt":"0.000016","completion":"0.000016"},"context_length":4096,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}}]}'
+  recorded_at: Wed, 02 Aug 2023 11:23:14 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are an organizer responsible for determining the skeleton of thought for a
+        superintelligent AI called Deep Thought.\n            Provide a skeleton in
+        a list of points, numbered 1., 2., 3., etc. to assist Deep Thought in generating
+        comprehensive\n            high quality answers. Instead of writing a full
+        sentence, each skeleton point should be very short with only 3~6 words.\n            Generally,
+        a skeleton should have 3~10 points. The skeleton should be as comprehensive
+        as possible, covering all key\n            points of the answer. The skeleton
+        should be as high quality as possible, with each point being clear and concise.\n\n            Question:\n            How
+        should an organization approach creating a winning strategy?\n\n            Skeleton:\n            1.
+        Understand organizational mission\n            2. Analyze market environment\n            3.
+        Identify core competencies\n            4. SWOT analysis\n            5. Define
+        clear objectives\n            6. Devise strategic initiatives\n            7.
+        Implementation plan\n            8. Regular performance evaluation\n            9.
+        Adapt to changes\n            10. Continual improvement\n\n            Question:
+        What''s the best way to replace a carburetor in an engine?\n\n            1.
+        Acquire correct replacement part\n            2. Disconnect battery\n            3.
+        Remove air cleaner assembly\n            4. Disconnect fuel lines\n            5.
+        Unbolt and remove old carburetor\n            6. Install new carburetor\n            7.
+        Connect fuel lines\n            8. Reattach air cleaner assembly\n            9.
+        Reconnect battery\n            10. Test engine performance\n\n            Question:
+        How do you make a cup of tea?\n            Skeleton:\n            1. Select
+        preferred tea type\n            2. Boil water\n            3. Pre-warm teapot/cup\n            4.
+        Add tea to teapot\n            5. Pour hot water\n            6. Steep for
+        optimal time\n            7. Remove tea leaves/bag\n            8. Optional:
+        Add sweeteners/milk\n\n            Produce a JSON output according to the
+        following schema without any formatting or markdown.\n            <JSON_SCHEMA>\n            {\n              \"$schema\":
+        \"http://json-schema.org/draft-07/schema#\",\n              \"type\": \"object\",\n              \"properties\":
+        {\n                  \"question\": {\n                      \"type\": \"string\"\n                  },\n                  \"skeleton\":
+        {\n                      \"type\": \"array\",\n                      \"items\":
+        {\n                          \"type\": \"object\",\n                          \"properties\":
+        {\n                              \"order\": {\n                                  \"type\":
+        \"integer\",\n                                  \"minimum\": 1,\n                                  \"maximum\":
+        10\n                              },\n                              \"text\":
+        {\n                                  \"type\": \"string\"\n                              }\n                          },\n                          \"required\":
+        [\"order\", \"text\"]\n                      },\n                      \"minItems\":
+        3,\n                      \"maxItems\": 10\n                  }\n              },\n              \"required\":
+        [\"question\", \"skeleton\"]\n            }\n            </JSON_SCHEMA>\n            Now,
+        please provide a skeleton for the following question. Use provided JSON schema
+        to format your skeleton. Return only JSON.\n"},{"role":"user","content":"What
+        is the meaning of life?"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":2048,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '8885'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '87100'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 1.932s
+      X-Request-Id:
+      - dbc0f76e76eaee15b080f2f8bc1d5435
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f29a09fed977-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EdCMjsRqKsmDQteIo7GTa9nTlS",
+          "object": "chat.completion",
+          "created": 1690975395,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"question\": \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\": 1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\": 2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\": 3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\": 4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\": 5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\": 6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\": 7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\": 8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\": 9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\": 10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 664,
+            "completion_tokens": 242,
+            "total_tokens": 906
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:24 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 10. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            10.
+        Creating and leaving a legacy\n            </POINT>\n            Return your
+        answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1544'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3496'
+      X-Ratelimit-Remaining-Tokens:
+      - '87451'
+      X-Ratelimit-Reset-Requests:
+      - 58ms
+      X-Ratelimit-Reset-Tokens:
+      - 1.698s
+      X-Request-Id:
+      - bf27d49bba3a1d065d5c47f51a127a2c
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d45a274e12-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EmXxVJvJZS9XW9RGHj1IyMKiHa",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 10,\n  \"text\": \"Creating and leaving a permanent and meaningful impact on the world by contributing something that lasts beyond our own existence.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 440,
+            "completion_tokens": 35,
+            "total_tokens": 475
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:25 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 7. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            7.
+        Achieving self-actualization\n            </POINT>\n            Return your
+        answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1551'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3498'
+      X-Ratelimit-Remaining-Tokens:
+      - '88720'
+      X-Ratelimit-Reset-Requests:
+      - 33ms
+      X-Ratelimit-Reset-Tokens:
+      - 853ms
+      X-Request-Id:
+      - 6c425affc5b4bc79b7415851eb58ec3a
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d44b48d92e-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4Em0OqyLHpxWBpnbBUtHXMZl0Bl",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 7,\n  \"text\": \"Achieving self-actualization means reaching one's full potential and becoming the best version of oneself.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 441,
+            "completion_tokens": 34,
+            "total_tokens": 475
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:25 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 9. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            9.
+        Finding contentment and peace\n            </POINT>\n            Return your
+        answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1846'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3495'
+      X-Ratelimit-Remaining-Tokens:
+      - '86819'
+      X-Ratelimit-Reset-Requests:
+      - 70ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.12s
+      X-Request-Id:
+      - 8bf81e193eb590ecedf1f017e7cc487b
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d45e4ad967-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EmS3cTlF30cZfb9w6GLRKPjmda",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 9,\n  \"text\": \"Finding contentment and peace allows us to fully appreciate and enjoy the present moment, leading to a sense of fulfillment and satisfaction in life.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 440,
+            "completion_tokens": 41,
+            "total_tokens": 481
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:26 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 6. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            6.
+        Forming meaningful connections\n            </POINT>\n            Return your
+        answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1882'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3497'
+      X-Ratelimit-Remaining-Tokens:
+      - '88085'
+      X-Ratelimit-Reset-Requests:
+      - 46ms
+      X-Ratelimit-Reset-Tokens:
+      - 1.276s
+      X-Request-Id:
+      - 446ab13088e5ec8421e93ffa9a97022b
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d44e44376b-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EmPVRpKo2yjrjFiKWQlahlvVaN",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 6,\n  \"text\": \"Forming meaningful connections allows us to experience love, belonging, and understanding, which gives our lives purpose and adds depth to our human experience.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 439,
+            "completion_tokens": 42,
+            "total_tokens": 481
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:26 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 1. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            1.
+        Contemplation of existence\n            </POINT>\n            Return your
+        answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1824'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3497'
+      X-Ratelimit-Remaining-Tokens:
+      - '85637'
+      X-Ratelimit-Reset-Requests:
+      - 41ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.908s
+      X-Request-Id:
+      - bcefcd895a6877d8e88e5154b8552728
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d419b44c7e-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4Em1NLhK8VeHyTpZ1Qah2KhYZNP",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 1,\n  \"text\": \"Contemplation of existence leads to self-reflection, introspection, and a deeper understanding of our place in the universe.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 440,
+            "completion_tokens": 39,
+            "total_tokens": 479
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:26 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 2. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            2.
+        Search for personal fulfillment\n            </POINT>\n            Return
+        your answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '2133'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '89359'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 427ms
+      X-Request-Id:
+      - 00c6c0523d8f7064c810b3462a211d99
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d44a8ad902-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EmlvkWIGf0zhIRn9YrONXZ9M9E",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 2,\n  \"text\": \"The search for personal fulfillment is a central aspect of finding meaning in life. It involves pursuing activities and goals that align with one's values and desires, leading to a sense of satisfaction and purpose.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 439,
+            "completion_tokens": 53,
+            "total_tokens": 492
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:26 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 4. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            4.
+        Pursuit of happiness\n            </POINT>\n            Return your answer
+        using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '2606'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3498'
+      X-Ratelimit-Remaining-Tokens:
+      - '86274'
+      X-Ratelimit-Reset-Requests:
+      - 25ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.483s
+      X-Request-Id:
+      - 92e2b7a51adb7e3eeece9dc209b21a21
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d43ae6d995-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EmGeisIIwlPAVH8C1XOEoCgNGE",
+          "object": "chat.completion",
+          "created": 1690975404,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 4,\n  \"text\": \"The pursuit of happiness is an integral part of the meaning of life. It is the constant search for joy, satisfaction, and fulfillment that gives life purpose and meaning. By seeking happiness, individuals are able to cultivate a life that is personally meaningful and reflects their values and desires.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 439,
+            "completion_tokens": 69,
+            "total_tokens": 508
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:27 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 5. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            5.
+        Contributing to the greater good\n            </POINT>\n            Return
+        your answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1145'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '86547'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.301s
+      X-Request-Id:
+      - 62b94b8e600f6dc529f063e96a146722
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d46b884c8b-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4Eofb4GibJmqCG8nuwBrehUDeyh",
+          "object": "chat.completion",
+          "created": 1690975406,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\"order\": 5, \"text\": \"Contributing to the greater good\"}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 441,
+            "completion_tokens": 17,
+            "total_tokens": 458
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:27 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 3. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            3.
+        Exploration of purpose and values\n            </POINT>\n            Return
+        your answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:27 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '1550'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '86153'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.564s
+      X-Request-Id:
+      - 076e590e9b1aa6179a38dbf76f95c350
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d44ecdd943-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EozuRKsHUybzmGVZtZmS3FeIT0",
+          "object": "chat.completion",
+          "created": 1690975406,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 3,\n  \"text\": \"Exploring one's purpose and values allows for the development of a meaningful and fulfilling life.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 440,
+            "completion_tokens": 32,
+            "total_tokens": 472
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:27 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are responsible for continuing the writing of one and only one point in the
+        overall answer\n            to the following question.\n            The question
+        is:\n            <QUESTION>\n            What is the meaning of life?\n            </QUESTION>\n            The
+        skeleton of the answer is:\n            <SKELETON>\n            {\n  \"question\":
+        \"What is the meaning of life?\",\n  \"skeleton\": [\n    {\n      \"order\":
+        1,\n      \"text\": \"Contemplation of existence\"\n    },\n    {\n      \"order\":
+        2,\n      \"text\": \"Search for personal fulfillment\"\n    },\n    {\n      \"order\":
+        3,\n      \"text\": \"Exploration of purpose and values\"\n    },\n    {\n      \"order\":
+        4,\n      \"text\": \"Pursuit of happiness\"\n    },\n    {\n      \"order\":
+        5,\n      \"text\": \"Contributing to the greater good\"\n    },\n    {\n      \"order\":
+        6,\n      \"text\": \"Forming meaningful connections\"\n    },\n    {\n      \"order\":
+        7,\n      \"text\": \"Achieving self-actualization\"\n    },\n    {\n      \"order\":
+        8,\n      \"text\": \"Seeking spiritual enlightenment\"\n    },\n    {\n      \"order\":
+        9,\n      \"text\": \"Finding contentment and peace\"\n    },\n    {\n      \"order\":
+        10,\n      \"text\": \"Creating and leaving a legacy\"\n    }\n  ]\n}\n            </SKELETON>\n"},{"role":"user","content":"            Continue
+        and only continue the writing of point 8. Write it succinctly\n            in
+        a few sentences and do not continue with other points.\n            <POINT>\n            8.
+        Seeking spiritual enlightenment\n            </POINT>\n            Return
+        your answer using the following JSON schema.\n            <SCHEMA>\n            {\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"type\":\"object\",\"properties\":{\"order\":{\"type\":\"integer\",\"minimum\":1,\"maximum\":10},\"text\":{\"type\":\"string\"}},\"required\":[\"order\",\"text\"]}\n            </SCHEMA>\n"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":200,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:23:28 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '2641'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '86414'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.39s
+      X-Request-Id:
+      - edbf050bcc5913df0fa84d3b0f08105b
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2d45b2dd90a-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EnIBetz0dZuEXpBEzARGYy70A2",
+          "object": "chat.completion",
+          "created": 1690975405,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "{\n  \"order\": 8,\n  \"text\": \"Seeking spiritual enlightenment allows individuals to transcend the limitations of their physical existence and connect with a higher power or ultimate reality. It provides a sense of purpose and guidance, helping individuals understand their place in the universe and find inner peace.\"\n}"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 438,
+            "completion_tokens": 60,
+            "total_tokens": 498
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:23:28 GMT
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"            You
+        are an expert writer, responsible for writing the final, comprehensive answer
+        to the following question.\n\n            <QUESTION>\n            What is
+        the meaning of life?\n            </QUESTION>\n\n            The user will
+        provide a list of points that should guide your writing. Carefully consider
+        all points\n            provided when formulating your answer.\n"},{"role":"user","content":"[10,
+        #<Roseflow::Reasoning::SkeletonPoint order=10 text=\"Creating and leaving
+        a permanent and meaningful impact on the world by contributing something that
+        lasts beyond our own existence.\">]\n[7, #<Roseflow::Reasoning::SkeletonPoint
+        order=7 text=\"Achieving self-actualization means reaching one''s full potential
+        and becoming the best version of oneself.\">]\n[9, #<Roseflow::Reasoning::SkeletonPoint
+        order=9 text=\"Finding contentment and peace allows us to fully appreciate
+        and enjoy the present moment, leading to a sense of fulfillment and satisfaction
+        in life.\">]\n[6, #<Roseflow::Reasoning::SkeletonPoint order=6 text=\"Forming
+        meaningful connections allows us to experience love, belonging, and understanding,
+        which gives our lives purpose and adds depth to our human experience.\">]\n[1,
+        #<Roseflow::Reasoning::SkeletonPoint order=1 text=\"Contemplation of existence
+        leads to self-reflection, introspection, and a deeper understanding of our
+        place in the universe.\">]\n[2, #<Roseflow::Reasoning::SkeletonPoint order=2
+        text=\"The search for personal fulfillment is a central aspect of finding
+        meaning in life. It involves pursuing activities and goals that align with
+        one''s values and desires, leading to a sense of satisfaction and purpose.\">]\n[4,
+        #<Roseflow::Reasoning::SkeletonPoint order=4 text=\"The pursuit of happiness
+        is an integral part of the meaning of life. It is the constant search for
+        joy, satisfaction, and fulfillment that gives life purpose and meaning. By
+        seeking happiness, individuals are able to cultivate a life that is personally
+        meaningful and reflects their values and desires.\">]\n[5, #<Roseflow::Reasoning::SkeletonPoint
+        order=5 text=\"Contributing to the greater good\">]\n[3, #<Roseflow::Reasoning::SkeletonPoint
+        order=3 text=\"Exploring one''s purpose and values allows for the development
+        of a meaningful and fulfilling life.\">]\n[8, #<Roseflow::Reasoning::SkeletonPoint
+        order=8 text=\"Seeking spiritual enlightenment allows individuals to transcend
+        the limitations of their physical existence and connect with a higher power
+        or ultimate reality. It provides a sense of purpose and guidance, helping
+        individuals understand their place in the universe and find inner peace.\">]"}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"max_tokens":2048,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 02 Aug 2023 11:24:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '31656'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '87171'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 1.885s
+      X-Request-Id:
+      - 50509925932b72623c8e4b738d1841f3
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f05f2ed9ebd4c8a-HEL
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7j4EqqIKNhLdLvXJdpHlSnh3izha8",
+          "object": "chat.completion",
+          "created": 1690975408,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "The meaning of life is a profound and philosophical question that has been pondered by humans for centuries. While there may not be a definitive answer that applies universally, there are several points that can guide our understanding and exploration of this complex topic.\n\n1. Contemplation of existence: One essential aspect of finding meaning in life is engaging in self-reflection and introspection. By contemplating our existence, we can deepen our understanding of ourselves and our place in the universe. This introspective journey allows us to explore our values, beliefs, and purpose, leading to a more meaningful and fulfilling life.\n\n2. Search for personal fulfillment: The search for personal fulfillment lies at the core of finding meaning in life. This involves pursuing activities and goals that align with our values and desires, ultimately leading to a sense of satisfaction, purpose, and self-actualization. By following our passions and pursuing our dreams, we can create a life that is personally meaningful and reflects our unique identities.\n\n3. Exploration of purpose and values: To build a meaningful and fulfilling life, it is important to explore our purpose and values. By understanding what truly matters to us, we can align our actions and choices with our authentic selves, leading to a sense of coherence and meaning. This exploration allows us to live in accordance with our principles, bringing a deeper sense of fulfillment and satisfaction.\n\n4. Pursuit of happiness: The pursuit of happiness is an integral part of the meaning of life. It involves continuously seeking joy, satisfaction, and fulfillment. By embracing positive emotions and engaging in activities that bring us happiness, we can cultivate a life that is personally meaningful and reflects our values and desires.\n\n5. Contributing to the greater good: Making a positive impact on the world and contributing to the greater good is another aspect of the meaning of life. By utilizing our unique talents, skills, and resources, we can contribute to the betterment of society and leave a lasting legacy. Creating and leaving a permanent and meaningful impact on the world gives our existence a sense of purpose beyond our own lifetime.\n\n6. Forming meaningful connections: Meaningful connections with others are fundamental to the human experience. By fostering love, belonging, and understanding in our relationships, we create a sense of purpose and add depth to our lives. These connections nourish us emotionally and provide support during life's ups and downs, enhancing our overall wellbeing and sense of meaning.\n\n7. Achieving self-actualization: Reaching our full potential and becoming the best version of ourselves is a central aspect of finding meaning in life. This involves constant growth, learning, and self-improvement. By embracing challenges, developing new skills, and pursuing personal growth, we can achieve self-actualization, leading to a greater sense of purpose and fulfillment.\n\n8. Seeking spiritual enlightenment: For many individuals, seeking spiritual enlightenment plays a significant role in finding meaning in life. It involves transcending the limitations of our physical existence and connecting with a higher power or ultimate reality. This spiritual connection provides a sense of purpose and guidance, helping us understand our place in the universe and find inner peace.\n\n9. Finding contentment and peace: Finding contentment and peace allows us to fully appreciate and enjoy the present moment. This state of being leads to a sense of fulfillment and satisfaction in life, as we learn to accept ourselves and our circumstances. By embracing mindfulness and cultivating gratitude, we can find contentment and experience a deeper sense of meaning.\n\nIn conclusion, the meaning of life is a deeply personal and subjective concept. It encompasses various elements, including creating a lasting impact, achieving self-actualization, finding contentment, forming meaningful connections, contemplating existence, exploring purpose and values, pursuing happiness, contributing to the greater good, and seeking spiritual enlightenment. By embracing these points and embarking on a journey of self-discovery, we can each find our own unique meaning and purpose in life."
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 561,
+            "completion_tokens": 781,
+            "total_tokens": 1342
+          }
+        }
+  recorded_at: Wed, 02 Aug 2023 11:24:00 GMT
+recorded_with: VCR 6.2.0

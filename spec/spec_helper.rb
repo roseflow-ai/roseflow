@@ -10,7 +10,7 @@ require "vcr"
 require "coveralls"
 require "simplecov"
 
-# Coveralls.wear!
+Coveralls.wear!
 SimpleCov.start
 
 VCR.configure do |config|

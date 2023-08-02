@@ -13,9 +13,9 @@ module Roseflow
     class Model
       attr_reader :name
 
-      delegate :chat, to: :instance
+      delegate :chat, :embed, to: :instance
 
-      def initialize(name:, provider: nil)
+      def initialize(name: nil, provider: nil)
         raise ArgumentError, "Name must be provided" if name.nil?
         provider = resolve_provider(name, provider)
         instance = create_adapted_instance(name, provider)
