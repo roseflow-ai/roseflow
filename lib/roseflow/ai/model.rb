@@ -1,18 +1,61 @@
 # frozen_string_literal: true
 
+require "roseflow/model_repository"
+require "roseflow/provider_repository"
+require "roseflow/ai/models/instance_factory"
+require "roseflow/ai/models/openai_adapter"
+require "roseflow/ai/models/openrouter_adapter"
+
 module Roseflow
   module AI
-    class Model
-      attr_reader :name, :provider
+    class ModelInstanceNotFoundError < StandardError; end
 
-      def initialize(name:, provider:)
+    class Model
+      attr_reader :name
+
+      delegate :chat, to: :instance
+
+      def initialize(name:, provider: nil)
+        raise ArgumentError, "Name must be provided" if name.nil?
+        provider = resolve_provider(name, provider)
+        instance = create_adapted_instance(name, provider)
         @name = name
-        @provider = provider
-        @model_ = provider.models.find(name)
+        @instance = instance
+        @_provider = provider
       end
 
-      def call(operation, input)
-        @model_.call(operation, input)
+      def provider
+        _provider.name
+      end
+
+      def call(operation, options, &block)
+        instance.call(operation, options, &block)
+      end
+
+      def operations
+        instance.operations
+      end
+
+      def self.load(name)
+        Registry.get(:models).find(name)
+      end
+
+      private
+
+      attr_reader :instance, :_provider
+
+      def resolve_provider(name, provider)
+        if provider.nil?
+          provider_name = Registry.get(:models).find(name).provider
+          Registry.get(:providers).find(provider_name)
+        else
+          return provider if provider.instance_of?(Provider)
+          Registry.get(:providers).find(provider)
+        end
+      end
+
+      def create_adapted_instance(name, provider)
+        Models::InstanceFactory.create(name, provider)
       end
     end # Model
   end # AI

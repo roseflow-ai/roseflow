@@ -12,17 +12,19 @@ module Roseflow
 
         describe "#call" do
           context "can be called" do
-            let(:provider) { instance_double("Roseflow::Provider") }
+            let(:provider) { Registry.get(:providers).find(:openai) }
             let(:ctx) { Roseflow::InteractionContext.make(provider: provider, model: model) }
 
             it "calls the action" do
-              expect(action).to receive(:execute)
-              action.execute(ctx)
+              VCR.use_cassette("ai/resolve_model") do
+                expect(action).to receive(:execute)
+                action.execute(ctx)
+              end
             end
           end
 
           context "when the model is found" do
-            let(:provider) { instance_double("Roseflow::Provider") }
+            let(:provider) { Registry.get(:providers).find(:openai) }
             let(:ctx) { Roseflow::InteractionContext.make(provider: provider, model: model) }
 
             before(:each) do
@@ -32,28 +34,28 @@ module Roseflow
             end
 
             it "returns a result" do
-              result = described_class.execute(ctx)
-              expect(result).to be_a Roseflow::InteractionContext
+              VCR.use_cassette("ai/resolve_model") do
+                result = described_class.execute(ctx)
+                expect(result).to be_a Roseflow::InteractionContext
+              end
             end
 
             it "adds a new LLM to the context" do
-              result = action.execute(ctx)
-              expect(result.llm).to be_a Roseflow::AI::Model
+              VCR.use_cassette("ai/resolve_model") do
+                result = action.execute(ctx)
+                expect(result.llm).to be_a Roseflow::AI::Model
+              end
             end
           end
 
           context "when the model is not found" do
-            let(:provider) { instance_double("Roseflow::Provider") }
-            let(:ctx) { Roseflow::InteractionContext.make(provider: provider, model: model) }
-
-            before(:each) do
-              models = [double(name: "gpt-10.5-pro")]
-              allow(provider).to receive(:models).and_return(models)
-              allow(models).to receive(:find).with(model).and_return(nil)
-            end
+            let(:provider) { Registry.get(:providers).find(:openai) }
+            let(:ctx) { Roseflow::InteractionContext.make(provider: provider, model: "gpt-10") }
 
             it "the context fails" do
-              expect(action.execute(ctx)).to be_failure
+              VCR.use_cassette("ai/resolve_model") do
+                expect { action.execute(ctx) }.to raise_error Roseflow::ModelRepository::ModelNotFoundError
+              end
             end
           end
         end

@@ -13,13 +13,13 @@ module Roseflow
         promises :llm
 
         executed do |context|
-          model = context.provider.models.find(context[:model])
+          model = Registry.get(:models).find(context[:model])
 
           unless model
             context.fail_and_return!("Model #{context[:model]} not found")
           end
 
-          context[:llm] = Roseflow::AI::Model.new(name: model.name, provider: context.provider)
+          context[:llm] = model
         end
       end
     end

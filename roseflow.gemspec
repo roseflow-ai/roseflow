@@ -36,6 +36,7 @@ Gem::Specification.new do |spec|
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "activesupport", "~> 7.0"
   spec.add_dependency "activemodel", "~> 7.0"
+  spec.add_dependency "async", "~> 2.6.0"
   spec.add_dependency "anyway_config", "~> 2.0"
   spec.add_dependency "dry-struct", "~> 1.6"
   spec.add_dependency "dry-validation", "~> 1.10"
@@ -47,7 +48,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "pragmatic_segmenter", "~> 0.3"
   spec.add_development_dependency "roseflow-openai", "~> 0.1.0"
+  spec.add_development_dependency "roseflow-openrouter", "~> 0.1.0"
   spec.add_development_dependency "roseflow-pinecone", "~> 0.1.0"
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "vcr"
+  spec.add_development_dependency "coveralls_reborn"
+  spec.add_development_dependency "simplecov"
 end

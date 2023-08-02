@@ -7,6 +7,17 @@ Anyway::Settings.use_local_files = true
 require "roseflow"
 require "webmock/rspec"
 require "vcr"
+require "coveralls"
+require "simplecov"
+
+# Coveralls.wear!
+SimpleCov.start
+
+VCR.configure do |config|
+  config.filter_sensitive_data("<OPENAI_KEY>") { Roseflow::OpenAI::Config.new.api_key }
+  config.filter_sensitive_data("<OPENAI_ORGANIZATION_ID>") { Roseflow::OpenAI::Config.new.organization_id }
+  config.filter_sensitive_data("<OPENROUTER_KEY>") { Roseflow::OpenRouter::Config.new.api_key }
+end
 
 Dir[File.join(File.dirname(__FILE__), "support", "**", "*.rb")].sort.each { |f| require f }
 

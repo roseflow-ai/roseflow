@@ -6,4 +6,5 @@ module Types
   include Dry.Types()
 
   Number = Types::Float | Types::Integer
+  StringOrNil = Types::String | Types::Nil
 end

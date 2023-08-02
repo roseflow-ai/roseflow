@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://openrouter.ai/api/v1/models
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Http-Referer:
+      - https://roseflow.ai
+      User-Agent:
+      - Faraday v2.7.10
+      Authorization:
+      - Bearer <OPENROUTER_KEY>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, X-Api-Key, X-CSRF-Token, X-Requested-With, Accept, Accept-Version,
+        Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, HTTP-Referer,
+        X-Windowai-Title, X-Openrouter-Title, X-Title
+      Access-Control-Allow-Methods:
+      - GET,OPTIONS,PATCH,DELETE,POST,PUT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 02 Aug 2023 08:04:04 GMT
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/v1/models"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - arn1::g9nv9-1690963443122-b75e2c397511
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"data":[{"id":"openai/gpt-3.5-turbo","pricing":{"prompt":"0.0000015","completion":"0.000002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-3.5-turbo-0301","pricing":{"prompt":"0.0000015","completion":"0.000002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-3.5-turbo-16k","pricing":{"prompt":"0.000003","completion":"0.000004"},"context_length":16383,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4","pricing":{"prompt":"0.00003","completion":"0.00006"},"context_length":8191,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4-0314","pricing":{"prompt":"0.00003","completion":"0.00006"},"context_length":8191,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/gpt-4-32k","pricing":{"prompt":"0.00006","completion":"0.00012"},"context_length":32767,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"openai/text-davinci-002","pricing":{"prompt":"0.00002","completion":"0.00002"},"context_length":4095,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-2","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-v1","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-v1","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-1.2","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-v1-100k","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-v1-100k","pricing":{"prompt":"0.00001102","completion":"0.00003268"},"context_length":100000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"anthropic/claude-instant-1.0","pricing":{"prompt":"0.00000163","completion":"0.00000551"},"context_length":9000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"google/palm-2-chat-bison","pricing":{"prompt":"0","completion":"0"},"context_length":8000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"google/palm-2-codechat-bison","pricing":{"prompt":"0","completion":"0"},"context_length":8000,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"meta-llama/llama-2-13b-chat","pricing":{"prompt":"0.000004","completion":"0.000004"},"context_length":4096,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}},{"id":"meta-llama/llama-2-70b-chat","pricing":{"prompt":"0.000016","completion":"0.000016"},"context_length":4096,"input_limits":{"prompt_tokens":1000000,"max_tokens":1000000}}]}'
+  recorded_at: Wed, 02 Aug 2023 08:04:04 GMT
+recorded_with: VCR 6.2.0

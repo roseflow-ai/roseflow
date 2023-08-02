@@ -4,11 +4,6 @@ require "roseflow/chat/dialogue"
 require "roseflow/chat/personality"
 require "roseflow/chat/message"
 
-VCR.configure do |config|
-  config.filter_sensitive_data("<OPENAI_KEY>") { Roseflow::OpenAI::Config.new.api_key }
-  config.filter_sensitive_data("<OPENAI_ORGANIZATION_ID>") { Roseflow::OpenAI::Config.new.organization_id }
-end
-
 module Roseflow
   module Chat
     RSpec.describe Dialogue do

@@ -1,30 +1,32 @@
 # frozen_string_literal: true
 
-require "roseflow/openai/provider"
+require "roseflow/provider_repository"
+require "roseflow/ai/providers/instance_factory"
 
 module Roseflow
   module AI
     class Provider
-      def initialize(name:, credentials:)
+      attr_reader :name
+
+      def initialize(name:, config:)
+        instance = create_adapted_instance(config)
         @name = name
-        @credentials = credentials
-        initialize_provider
+        @instance = instance
       end
 
       def models
-        @models ||= provider.models
+        @models ||= instance.models
       end
 
       private
 
-      attr_reader :name, :credentials, :provider
+      attr_reader :instance
 
-      def initialize_provider
-        case name
-        when :openai
-          @provider = Roseflow::OpenAI::Provider.new(credentials: credentials)
-        end
+      def create_adapted_instance(config)
+        Providers::InstanceFactory.create(config)
       end
     end # Provider
+
+    ProviderNotFoundError = ProviderRepository::ProviderNotFoundError
   end # AI
 end # Roseflow

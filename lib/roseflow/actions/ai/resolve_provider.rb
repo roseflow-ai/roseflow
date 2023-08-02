@@ -2,7 +2,6 @@
 
 require "roseflow/action"
 require "roseflow/ai/provider"
-require "roseflow/openai/config"
 
 module Roseflow
   module Actions
@@ -20,10 +19,7 @@ module Roseflow
         private_class_method
 
         def self.resolve_provider(provider)
-          case provider
-          when :openai
-            Roseflow::AI::Provider.new(name: :openai, credentials: Roseflow::OpenAI::Config.new)
-          end
+          Registry.get(:providers).find(provider)
         end
       end
     end
