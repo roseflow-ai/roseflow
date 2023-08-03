@@ -19,7 +19,6 @@ module Roseflow
       def call
         raise ArgumentError, "An input must be provided" unless @input
         raise EmbeddingModelNotSpecifiedError, "An embedding model must be specified" unless @model
-        # response = @model.call(:embedding, model: @model.name, input: @input)
         response = @model.embed(input: @input)
         embedding = response.embedding
         @vector = Primitives::Vector.new(values: embedding.vector, dimensions: embedding.length)

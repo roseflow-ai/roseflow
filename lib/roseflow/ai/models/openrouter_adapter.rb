@@ -16,6 +16,10 @@ module Roseflow
         def chat(options, &block)
           @model.chat(options.delete(:messages), options, &block)
         end
+
+        def completion(options, &block)
+          @model.completion(options, &block)
+        end
       end
     end
   end
