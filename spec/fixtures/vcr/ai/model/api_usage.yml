@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"Count
+        from 1 to 5."}],"temperature":1.0,"top_p":1.0,"n":1,"stream":false,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 10 Aug 2023 18:52:19 GMT
+      Content-Type:
+      - application/json
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '666'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '89977'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 14ms
+      X-Request-Id:
+      - 34f10078b36d2a1603b952c766f7c06d
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f4a6f6909ad0a30-ARN
+      Content-Encoding:
+      - gzip
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "id": "chatcmpl-7m53bscVnwzeEWkJy0IdVoF2xRqhu",
+          "object": "chat.completion",
+          "created": 1691693539,
+          "model": "gpt-3.5-turbo-0613",
+          "choices": [
+            {
+              "index": 0,
+              "message": {
+                "role": "assistant",
+                "content": "1, 2, 3, 4, 5"
+              },
+              "finish_reason": "stop"
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 15,
+            "completion_tokens": 13,
+            "total_tokens": 28
+          }
+        }
+  recorded_at: Thu, 10 Aug 2023 18:52:19 GMT
+recorded_with: VCR 6.2.0

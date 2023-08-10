@@ -3,7 +3,10 @@
 # A collection of Interaction dummies for specs
 
 require "spec_helper"
+require "roseflow/action"
+require "roseflow/action/with_events"
 require "roseflow/interaction"
+require "omnes"
 
 module TestDoubles
   class AnInferenceAction
@@ -99,6 +102,45 @@ module TestDoubles
     executed do |context|
       number = context.fetch(:number, 0)
       context[:number] = number + 2
+    end
+  end
+
+  class EventedAction
+    extend Roseflow::Action
+    extend Roseflow::Action::WithEvents
+
+    executed do |context|
+      bus.publish(:action_event, name: "foo")
+    end
+  end
+
+  class ActionEventSubscriber
+    include Omnes::Subscriber
+
+    handle :action_event, with: :handler
+
+    def handler(event)
+      puts "RECEIVED EVENT: #{event.payload.fetch(:name)}"
+    end
+  end
+
+  class ApiUsageEventSubscriber
+    include Omnes::Subscriber
+
+    handle :api_usage_event, with: :handler
+
+    def handler(event)
+      puts "RECEIVED API USAGE: #{event.payload.fetch(:usage)}"
+    end
+  end
+
+  class StreamingEventSubscriber
+    include Omnes::Subscriber
+
+    handle :model_streaming_event, with: :handler
+
+    def handler(event)
+      puts "RECEIVED STREAMING EVENT for #{event.stream_id}: #{event.body}"
     end
   end
 end

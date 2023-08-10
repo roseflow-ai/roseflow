@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.openai.com/v1/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"Count
+        from 1 to 5."}],"temperature":1.0,"top_p":1.0,"n":1,"stream":true,"presence_penalty":0,"frequency_penalty":0}'
+    headers:
+      User-Agent:
+      - Faraday v2.7.10
+      Openai-Organization:
+      - "<OPENAI_ORGANIZATION_ID>"
+      Authorization:
+      - Bearer <OPENAI_KEY>
+      Content-Type:
+      - application/json
+      Expect:
+      - ''
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Thu, 10 Aug 2023 20:05:02 GMT
+      Content-Type:
+      - text/event-stream
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Openai-Organization:
+      - user-ac1ibhzl2jfgkeq1cwddwexl
+      Openai-Processing-Ms:
+      - '6'
+      Openai-Version:
+      - '2020-10-01'
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '89977'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 14ms
+      X-Request-Id:
+      - ca72723b8d2e25a112958e39cc5fd9b1
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7f4ad9f19eea98f1-ARN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Thu, 10 Aug 2023 20:05:03 GMT
+recorded_with: VCR 6.2.0

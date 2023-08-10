@@ -3,6 +3,7 @@
 require_relative "roseflow/version"
 
 require "roseflow/action"
+require "roseflow/action/with_events"
 require "roseflow/ai/model"
 require "roseflow/ai/provider"
 require "roseflow/chat/dialogue"

@@ -2,6 +2,7 @@
 
 require "roseflow/model_repository"
 require "roseflow/provider_repository"
+require "roseflow/ai/models/configuration"
 require "roseflow/ai/models/instance_factory"
 require "roseflow/ai/models/openai_adapter"
 require "roseflow/ai/models/openrouter_adapter"
@@ -11,9 +12,9 @@ module Roseflow
     class ModelInstanceNotFoundError < StandardError; end
 
     class Model
-      attr_reader :name
+      attr_reader :name, :config
 
-      delegate :chat, :embed, to: :instance
+      delegate :chat, :embed, :config, to: :instance
 
       def initialize(name: nil, provider: nil)
         raise ArgumentError, "Name must be provided" if name.nil?
@@ -22,6 +23,11 @@ module Roseflow
         @name = name
         @instance = instance
         @_provider = provider
+        # @config = instance.configuration
+      end
+
+      def config=(config)
+        @instance.configuration = config if config.is_a?(Models::Configuration)
       end
 
       def provider

@@ -9,12 +9,24 @@ module Roseflow
       class OpenAIAdapter < BaseAdapter
         include ModelInterface
 
+        def configuration
+          @configuration ||= Models::Configuration.new(name: @model.name)
+        end
+
+        alias_method :config, :configuration
+
+        def configuration=(config)
+          @configuration = config
+        end
+
         def call(operation, options, &block)
           @model.call(operation, options, &block)
         end
 
         def chat(options, &block)
-          @model.chat(options.delete(:messages), options, &block)
+          response = @model.chat(options.delete(:messages), options, &block)
+          publish_api_usage(response.usage) if @configuration.instrumentation
+          response
         end
 
         def embed(options)
@@ -23,6 +35,12 @@ module Roseflow
 
         def operations
           @model.operations
+        end
+
+        private
+
+        def publish_api_usage(usage)
+          Registry.get(:events).publish(:api_usage_event, usage: usage.to_h)
         end
       end
     end
