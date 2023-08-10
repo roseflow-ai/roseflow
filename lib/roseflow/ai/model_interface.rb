@@ -18,6 +18,10 @@ module Roseflow
       def operations
         raise NotImplementedError, "Model must implement #operations"
       end
+
+      def configuration
+        raise NotImplementedError, "Model must implement #configuration"
+      end
     end
   end
 end

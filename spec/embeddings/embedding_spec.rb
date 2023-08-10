@@ -27,6 +27,7 @@ module Roseflow
       describe "#call" do
         subject(:no_input) { described_class.new }
         subject(:no_model) { described_class.new(input: "test") }
+
         let(:model) { Registry.get(:models).find("text-embedding-ada-002") }
 
         subject { described_class.new(input: "test", model: model) }

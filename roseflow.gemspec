@@ -44,6 +44,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "google-protobuf", "~> 3.23"
   spec.add_dependency "hashie", "~> 5.0"
   spec.add_dependency "light-service", "~> 0.18"
+  spec.add_dependency "omnes"
   spec.add_dependency "phlex", "~> 1.8.1"
   spec.add_dependency "ulid-ruby", "~> 1.0"
 

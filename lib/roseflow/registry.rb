@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
+require "roseflow/event_bus"
+require "roseflow/model_repository"
+require "roseflow/provider_repository"
+
 module Roseflow
   class UnknownRegistryKeyError < StandardError; end
 
@@ -38,6 +42,8 @@ module Roseflow
         register(:providers, ProviderRepository.new)
       when :models
         register(:models, ModelRepository.new)
+      when :events
+        register(:events, EventBus.new)
       when :default_model
         register(:default_model, AI::Model.load("gpt-3.5-turbo"))
       end
