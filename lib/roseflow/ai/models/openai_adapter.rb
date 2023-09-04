@@ -25,7 +25,7 @@ module Roseflow
 
         def chat(options, &block)
           response = @model.chat(options.delete(:messages), options, &block)
-          publish_api_usage(response.usage) if @configuration.instrumentation
+          publish_api_usage(response.usage) if @configuration&.instrumentation
           response
         end
 
