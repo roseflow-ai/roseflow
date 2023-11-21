@@ -19,7 +19,7 @@ module Types
     )
 
     VisionImageMessageContent = Types::Hash.schema(
-      image_url: Types::Hash.schema(image_url: Types::String),
+      image_url: Types::Hash.schema(url: Types::String, detail: Types::String.default("auto")),
       type: Types::String.default("image_url"),
     )
   end
