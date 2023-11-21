@@ -12,5 +12,15 @@ module Types
     FunctionCallObject = Types::Hash
     StringOrObject = Types::String | FunctionCallObject
     StringOrArray = Types::String | Types::Array
+
+    VisionChatMessageContent = Types::Hash.schema(
+      text: Types::String,
+      type: Types::String.default("text"),
+    )
+
+    VisionImageMessageContent = Types::Hash.schema(
+      image_url: Types::Hash.schema(image_url: Types::String),
+      type: Types::String.default("image_url"),
+    )
   end
 end

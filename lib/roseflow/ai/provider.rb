@@ -18,6 +18,10 @@ module Roseflow
         @models ||= instance.models
       end
 
+      def get_file_content(file_id)
+        @instance.get_file_content(file_id)
+      end
+
       private
 
       attr_reader :instance

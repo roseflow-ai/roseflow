@@ -30,10 +30,24 @@ module Roseflow
 
     class UserMessage < Message
       attribute :role, Types::String.constrained(included_in: %w(user))
+
+      def self.from(input)
+        new(
+          role: "user",
+          content: input
+        )
+      end
     end
 
     class SystemMessage < Message
       attribute :role, Types::String.constrained(included_in: %w(system))
+
+      def self.from(input)
+        new(
+          role: "system",
+          content: input
+        )
+      end
     end
   end
 end
