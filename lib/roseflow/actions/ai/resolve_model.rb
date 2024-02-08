@@ -14,11 +14,7 @@ module Roseflow
 
         executed do |context|
           model = Registry.get(:models).find(context[:model])
-
-          unless model
-            context.fail_and_return!("Model #{context[:model]} not found")
-          end
-
+          context.fail_and_return!("Model #{context[:model]} not found") unless model
           context[:llm] = model
         end
       end

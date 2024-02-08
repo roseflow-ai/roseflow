@@ -32,6 +32,7 @@ module Roseflow
       attribute :role, Types::String.constrained(included_in: %w(user))
 
       def self.from(input)
+        input = input.is_a?(Roseflow::Prompt) ? input.call : input
         new(
           role: "user",
           content: input
@@ -43,6 +44,7 @@ module Roseflow
       attribute :role, Types::String.constrained(included_in: %w(system))
 
       def self.from(input)
+        input = input.is_a?(Roseflow::Prompt) ? input.call : input
         new(
           role: "system",
           content: input

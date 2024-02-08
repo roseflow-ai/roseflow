@@ -16,8 +16,6 @@ module Roseflow
           context[:provider] = resolve_provider(context[:provider])
         end
 
-        private_class_method
-
         def self.resolve_provider(provider)
           Registry.get(:providers).find(provider)
         end
