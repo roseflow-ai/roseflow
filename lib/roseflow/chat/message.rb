@@ -2,6 +2,7 @@
 
 require "dry-struct"
 require "roseflow/types"
+require "roseflow/prompt"
 
 module Roseflow
   module Chat
@@ -47,6 +48,18 @@ module Roseflow
         input = input.is_a?(Roseflow::Prompt) ? input.call : input
         new(
           role: "system",
+          content: input
+        )
+      end
+    end
+
+    class AssistantMessage < Message
+      attribute :role, Types::String.constrained(included_in: %w(assistant))
+
+      def self.from(input)
+        input = input.is_a?(Roseflow::Prompt) ? input.call : input
+        new(
+          role: "assistant",
           content: input
         )
       end
