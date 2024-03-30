@@ -6,7 +6,7 @@ module Types
   include Dry.Types()
 
   Number = Types::Float | Types::Integer
-  StringOrNil = Types::String | Types::Nil
+  StringOrNil = Types::String | Types::Nil unless const_defined?(:StringOrNil)
 
   module OpenAI
     FunctionCallObject = Types::Hash
